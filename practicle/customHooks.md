@@ -58,3 +58,26 @@
         }
         
         export default DataComponent;
+
+
+
+
+# When to Use Custom Hooks
+          =>       
+                1. We need to reuse logic across multiple components.
+                2. We want to improve readability and maintainability by keeping component logic clean.
+                3. We are using multiple built-in hooks together in a reusable way.
+                4. We want to encapsulate side effects like data fetching or state management
+                5. Interesting Things About Custom Hooks
+                6. Reusability Across Components: Custom hooks are designed to be reusable. They allow you to extract logic from components so the same functionality can be shared between different parts of your app without repeating code.
+                7. Encapsulates Logic: Custom hooks encapsulate logic in a reusable way, keeping your components cleaner and more focused on UI rendering. This is especially useful for managing side effects, API calls, or complex state logic.
+                8. Can Return Multiple Values: A custom hook can return multiple values (state, functions, etc.), making it versatile for handling various scenarios, such as managing both data and loading states.
+                9. Built-in Hook Support: Custom hooks can use built-in React hooks (useState, useEffect, useContext, etc.) to manage state, lifecycle, and context, allowing them to integrate seamlessly into React components.
+                10. Maintainable and Modular Code: By extracting logic into custom hooks, your code becomes more maintainable and modular. Each custom hook represents a small piece of functionality, improving readability and testability.
+                11. Avoids Repetitive Code: Custom hooks help reduce the need to write repetitive code in multiple components. For instance, handling form input logic can be abstracted into a custom hook.
+                12. Can Be Composed with Other Hooks: Custom hooks can be composed together to build complex functionality. This allows for a flexible and clean way to combine hooks for more sophisticated use cases.
+                13. Performance Considerations
+                Optimize API calls: For preventing the redundant requests caching mechanisms are used.
+                14. Minimize state updates: Reduce unnecessary state changes inside custom hooks to improve efficiency.
+                15. Use dependencies properly: Ensure hooks like useEffect have correct dependencies to prevent infinite loops.
+

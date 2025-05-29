@@ -2,6 +2,22 @@
 
 import { useState } from "react";
 
+
+/**
+ Optimized Accordion component using memo:
+ // Optimized Accordion component using memoization
+const Accordion = memo(({ title, content, isActive, onToggle }) => {
+  return (
+    <div style={{ marginBottom: "10px", border: "1px solid #ccc", padding: "10px" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", cursor: "pointer" }} onClick={onToggle}>
+        <strong>{title}</strong>
+        <span>{isActive ? "-" : "+"}</span>
+      </div>
+      {isActive && <div style={{ marginTop: "10px" }}>{content}</div>}
+    </div>
+  );
+});
+*/
 const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);
   return (
